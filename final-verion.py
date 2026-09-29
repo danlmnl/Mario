@@ -164,7 +164,7 @@ def try_add(plat, coins):
 def generate_money(rows, finish):
     coins = []
 
-    for r in range(1, count_rows):
+    for r in range(0, count_rows):
         row_coins = 0
         for plat in rows[r]:
             if plat == finish or row_coins >= coin_min_row:
@@ -387,8 +387,6 @@ while True:
     else:
         screen.blit(enemy2_left, (enemy2.x - camera_x, enemy2.y))
 
-
-
     pygame.draw.circle(screen, ANOTHERORANGE, (1090, 40), 20)
     pygame.draw.circle(screen, YELLOW, (1090, 40), 15)
     screen.blit(font.render(f"{len(takedmoney)} / {len(money)}", True, YELLOW), (1120, 30))
@@ -400,14 +398,14 @@ while True:
 
         text1 = resfont1.render("YOU WON", True, WHITE)
         text2 = resfont2.render("IN EVERY LEVEL", True, WHITE)
-        screen.blit(text1, (600 - text1.get_width() // 2, 250))
-        screen.blit(text2, (600 - text2.get_width() // 2, 430))
+        screen.blit(text1, ((size[0] - text1.get_width()) // 2, 250))
+        screen.blit(text2, ((size[0] - text2.get_width()) // 2, 430))
 
     elif gameres == "YOU WON":
         text1 = resfont1.render("YOU", True, WHITE)
         text2 = resfont1.render("WON", True, WHITE)
-        screen.blit(text1, (600 - text1.get_width() // 2, 200))
-        screen.blit(text2, (600 - text2.get_width() // 2, 380))
+        screen.blit(text1, ((size[0] - text1.get_width()) // 2, 200))
+        screen.blit(text2, ((size[0] - text2.get_width()) // 2, 380))
 
         if now - win_timer >= win_pause:
             count_win_games+=1
@@ -416,7 +414,7 @@ while True:
     if gameres == "YOU LOSE":
         text1 = resfont1.render("YOU", True, WHITE)
         text2 = resfont1.render("LOSE", True, WHITE)
-        screen.blit(text1, (600 - text1.get_width() // 2, 200))
-        screen.blit(text2, (600 - text2.get_width() // 2, 380))
+        screen.blit(text1, ((size[0] - text1.get_width()) // 2, 200))
+        screen.blit(text2, ((size[0] - text2.get_width()) // 2, 380))
 
     pygame.display.flip()

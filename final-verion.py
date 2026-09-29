@@ -124,7 +124,7 @@ def generate_level():
             attempts+=1
             i = random.randint(0, len(previous_row) - 1)
             pr_pl = previous_row[i]
-            spread = 80
+            spread = 50
             min_x = max(0, pr_pl.x - platform_w + overlap - spread)
             max_x = min(world_width-platform_w, pr_pl.x + pr_pl.width - overlap + spread)
             if min_x > max_x:

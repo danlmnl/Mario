@@ -163,14 +163,6 @@ def try_add(plat, coins):
 def generate_money(rows, finish):
     coins = []
 
-    for r in range(0, count_rows):
-        row_coins = 0
-        for plat in rows[r]:
-            if plat == finish:
-                continue
-            if try_add(plat, coins):
-                row_coins+=1
-
     for r in range(count_rows):
         for plat in rows[r]:
             if plat == finish:

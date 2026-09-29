@@ -59,7 +59,6 @@ coin_hit = 36
 coin_up = 30
 coin_ch = 0.8
 coin_min = 6
-coin_min_row = 1
 
 font = pygame.font.Font(None, 36)
 resfont1 = pygame.font.Font(None, 150)
@@ -167,7 +166,7 @@ def generate_money(rows, finish):
     for r in range(0, count_rows):
         row_coins = 0
         for plat in rows[r]:
-            if plat == finish or row_coins >= coin_min_row:
+            if plat == finish:
                 continue
             if try_add(plat, coins):
                 row_coins+=1
@@ -386,6 +385,8 @@ while True:
         screen.blit(enemy2_right, (enemy2.x - camera_x, enemy2.y))
     else:
         screen.blit(enemy2_left, (enemy2.x - camera_x, enemy2.y))
+
+
 
     pygame.draw.circle(screen, ANOTHERORANGE, (1090, 40), 20)
     pygame.draw.circle(screen, YELLOW, (1090, 40), 15)

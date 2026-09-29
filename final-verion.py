@@ -11,13 +11,10 @@ world_width = size[0] + world_extra
 
 BROWN = (150, 75, 0)
 GREEN = (135, 147, 1)
-ORANGE = (255, 165, 0)
 BLUE = (66, 170, 255)
 YELLOW = (255, 255, 0)
 ANOTHERORANGE = (254, 154, 35)
-BLACK = (0, 0, 0)
 WHITE = (255, 255, 255)
-RED = (255, 0, 0)
 
 mario_right = pygame.image.load('mario__right.png')
 mario_left = pygame.image.load('mario__left.png')

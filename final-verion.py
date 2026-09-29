@@ -340,7 +340,7 @@ while True:
 
         enemy2_pos.x += enemy2_speed*enemy2d
 
-        if (mario.centery < enemy2.centery and enemy2_ontheground and now - enemy2_lastjump >= enemy2_cooldownjump):
+        if (mario.centery < enemy2.centery - 30 and enemy2_ontheground and now - enemy2_lastjump >= enemy2_cooldownjump):
             enemy2_v.y = -enemy2_jumpsp
             enemy2_ontheground = False
             enemy2_lastjump = now
